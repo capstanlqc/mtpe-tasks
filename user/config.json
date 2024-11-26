@@ -1,0 +1,31 @@
+{
+    "input_is_omtpkg_template": true,
+    "keep_existing_translations": true,
+    "get_mt_for_translated_segments": false,
+    "mt_tmx_folder": "tm/auto/mt",
+    "source lang": "en",
+    "target_langs": [
+        "de-DE",
+        "es-ES",
+        "fr-FR",
+        "pl-PL",
+        "pt-PT",
+        "ro-RO"
+    ],
+    "mt_providers": [
+        "DeepL"
+    ],
+    "use_mt_with_best_qe_score": true,
+    "duplicate_project_per_engine": true,
+    "overwrite_mt_tmx_if_exists": true,
+    "quality_estimation": {
+        "thresholds": {
+            "de-DE": 0.86,
+            "es-ES": 0.88,
+            "fr-FR": 0.879,
+            "pl-PL": 0.87,
+            "pt-PT": 0.84,
+            "ro-RO": 0.901
+        }
+    }
+}
