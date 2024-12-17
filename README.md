@@ -33,7 +33,7 @@ Clone all team projects or unpack all the projects you want to analyze in a fold
 Run the script as:
 
 ``` 
-python code/get_edit_distances.py --parent /path/to/repos --template "ysc-strata_*_omt"
+python code/corr-score-edit.py --parent /path/to/repos --template "ysc-strata_*_omt"
 ```
 
 where the two arguments are the following: 
@@ -94,20 +94,20 @@ We have examined the relationship between the two variables with a scatterplot.
 
 | Locale | Threshold | Pearson coefficient | Pearson P-value | Spearman coefficient | Spearman P-value |
 |----|----|----|----|----|----|
-| pt-PT | 0.84 | 0.37 | 3.02e-131 | 0.27 | 2.73e-67 |
-| pl-PL | 0.87 | 0.39 | 4.28e-147 | 0.37 | 2.07e-130 |
-| fr-FR | 0.87 | 0.34 | 6.16e-108 | 0.19 | 5.27e-35 |
-| de-DE | 0.86 | 0.46 | 4.58e-215 | 0.35 | 3.42e-116 |
-| ro-RO | 0.90 | 0.30 | 1.62e-86 | 0.34 | 1.22e-110 |
-| es-ES | 0.88 | 0.34 | 3.15e-111 | 0.33 | 1.38e-107 |
+| pt-PT | 0.84      | 0.373566088788977 | 3.02915498707086E-131 | 0.270483131207319 | 2.73690796762657E-67  |
+| pl-PL | 0.87      | 0.394038614190113 | 4.28759280116097E-147 | 0.372445306402085 | 2.0727032912648E-130  |
+| fr-FR | 0.87      | 0.340461984939205 | 6.16300411319614E-108 | 0.194437929986979 | 5.27246757422632E-35  |
+| de-DE | 0.86      | 0.468501065695487 | 4.58098741147011E-215 | 0.352645304844544 | 3.42173552600613E-116 |
+| ro-RO | 0.9       | 0.305989685321915 | 1.62160426139411E-86  | 0.344508570234265 | 1.22620953749372E-110 |
+| es-ES | 0.88      | 0.345382876098042 | 3.15963260617931E-111 | 0.339930141525419 | 1.38620442294041E-107 |
 
 Here are the scatter plots for visual insight:
 
 | | |
 |---|---|
-| ![](analysis/edit_vs_thrshld_dev_de-DE.png) | ![](analysis/edit_vs_thrshld_dev_es-ES.png) |
-| ![](analysis/edit_vs_thrshld_dev_fr-FR.png) | ![](analysis/edit_vs_thrshld_dev_pl-PL.png) |
-| ![](analysis/edit_vs_thrshld_dev_pt-PT.png) | ![](analysis/edit_vs_thrshld_dev_ro-RO.png) |
+| ![](analysis/normalized-edit-distance/ned_vs_score_dev_de-DE.png) | ![](analysis/normalized-edit-distance/ned_vs_score_dev_es-ES.png) |
+| ![](analysis/normalized-edit-distance/ned_vs_score_dev_fr-FR.png) | ![](analysis/normalized-edit-distance/ned_vs_score_dev_pl-PL.png) |
+| ![](analysis/normalized-edit-distance/ned_vs_score_dev_pt-PT.png) | ![](analysis/normalized-edit-distance/ned_vs_score_dev_ro-RO.png) |
 
 See below average similarity ratio between the initial MT version and the PE version calculated for each of the two categories (high confidence and low confidence).
 
