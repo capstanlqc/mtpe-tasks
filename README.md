@@ -41,7 +41,9 @@ where the two arguments are the following:
 - `--parent`: absolute path to the folder where all project have been cloned or unpacked
 - `--template`: pattern including wildcards to match the project folders that should be considered
 
-### Background
+### Discussion
+
+#### Background
 
 > What is this threshold: @Laura: how did you determine the threshold? 
 
@@ -51,13 +53,13 @@ The *ideal threshold* would split all translations in two groups: high confidenc
 
 Some fine-tuning is necessary to find the ideal threshold. 
 
-### Goal 
+#### Goal 
 
 The goal of this analysis of PE effort is to ascertain to what degree the threshold used was ideal or far from ideal and how much fine-tuning is needed.
 
 The general hypothesis is that there is a linear relationship between the QE score assigned to MT translations and the PE effort used to improve them.
 
-### Data
+#### Data
 
 For each language pair (where English is always the source language), we collected the following data (for each segment in the project):
 
@@ -74,23 +76,21 @@ The data sample includes the whole population. The two variables measured (simil
 
 We also computed the average similarity ratio between the initial MT version and the PE version for each of the two categories (high confidence and low confidence).
 
-### Analysis
+#### Analysis
 
 We analyzed correlation between two variables: 
 
-- the distance or deviation of the QE score of each segment from the threshold
-- the similarity between the initial MT and the PE versions
-
-> The second magnitude is the opposite of the edit effort.
+- the quality evaluation (QE) score of each MT version
+- the post-editing (PE) distance to turn the initial MT version into the PE one
 
 We have used two metrics to calculate the correlation coefficient (which measures the extent to which two variables tend to change together):
 
 - Pearson correlatoin coefficient
 - Spearman correlation coeficient
 
-We have examined the relationship between the two variables with a scatterplot.
+We have visualized and examined the relationship between the two variables with a scatterplot.
 
-### Results
+#### Results
 
 | Locale | Threshold | Pearson coefficient | Pearson P-value | Spearman coefficient | Spearman P-value |
 |----|----|----|----|----|----|
@@ -120,11 +120,11 @@ See below average similarity ratio between the initial MT version and the PE ver
 | ro-RO | 0.91 | 0.82 |
 | es-ES | 0.88 | 0.79 |
 
-### Interpretation
+#### Interpretation
 
-Variables: The two variables whose relationship is measured are the PE effort and the deviation from the threshold. 
+Variables: The two variables whose relationship is measured are the PE distance and the QE score. 
 
-Metrics: The Pearson correlation coefficient measures the linear relationship between two variables and the Spearmanc correlation coefficient measures the monotonic relationship (not limited to linear) between two variables.
+Metrics: The Pearson correlation coefficient measures the linear relationship between two variables and the Spearman correlation coefficient measures the monotonic relationship (not limited to linear) between two variables.
 
 Strength: All Pearson coefficients range between 0.3 and 0.46, indicating weak to moderate positive linear relationships. Spearman coefficients range between 0.19 and 0.37, showing weaker but still statistically significant monotonic relationships.
 
