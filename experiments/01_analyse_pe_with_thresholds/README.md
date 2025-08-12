@@ -26,7 +26,7 @@ pip install .
 
 The data to be analyzed will be extracted from OmegaT projects after the PE task is concluded.
 
-Clone all team projects or unpack all the projects you want to analyze in a folder, let's call it `repos`. Copy file [`config.json"`](user/config.json) to that folder to.
+Clone all team projects or unpack all the projects you want to analyze in a folder, let's call it `repos`. Copy file [`config.json"`](user/config.json) to that folder too.
 
 ### Running
 
@@ -38,7 +38,7 @@ python code/corr-score-edit.py --parent /path/to/repos --template "ysc-strata_*_
 
 where the two arguments are the following: 
 
-- `--parent`: absolute path to the folder where all project have been cloned or unpacked
+- `--parent`: absolute path to the folder where all projects have been cloned or unpacked
 - `--template`: pattern including wildcards to match the project folders that should be considered
 
 ### Discussion
@@ -69,7 +69,7 @@ For each language pair (where English is always the source language), we collect
 - edit distance (number of edits)
 - similarity ratio
 - QE score (Comet)
-- confidence category
+- confidence label
 - deviation of QE score from threshold
 
 The data sample includes the whole population. The two variables measured (similarity ratio and deviation of QE score from threshold) are paired. No data clean-up was done, so data might include outliers. 
